@@ -1,0 +1,16 @@
+/home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/Environments/Hospital/hospital.usd
+/home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/Environments/Office/office.usd
+/home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/Environments/Terrains/flat_plane.usd
+/home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/Environments/Terrains/slope.usd
+/home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/Environments/Terrains/stairs.usd
+/home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/Environments/Terrains/rough_plane.usd
+/home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/full_warehouse.usd
+/home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/warehouse_multiple_shelves.usd
+/home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/warehouse_with_forklifts.usd
+/home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/warehouse.usd
+/home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/Environments/Digital_Twin_Warehouse/small_warehouse_digital_twin.usd
+/home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/Environments/Grid/gridroom_black.usd
+/home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/Environments/Grid/default_environment.usd
+/home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/Environments/Grid/gridroom_curved.usd
+/home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/Environments/Simple_Room/simple_room.usd
+/home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/Environments/Jetracer/jetracer_track_solid.usd

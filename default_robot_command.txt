@@ -1,0 +1,6 @@
+Nova_Carter GoTo -17.86 -21.12 0.0
+Nova_Carter Idle 7.3
+Nova_Carter GoTo -18.8 -3.23 0.0
+iw_hub GoTo -2.64 -1.52 0.0
+iw_hub GoTo -6.96 -14.71 -0.0
+iw_hub GoTo -2.64 -1.52 0.0

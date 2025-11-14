@@ -1,0 +1,3 @@
+https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.0/Isaac/People/Characters/Biped_Setup.usd
+https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.0/Isaac/People/Characters/biped_demo/biped_demo_meters.usd
+https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.0/Isaac/People/Characters/original_male_adult_construction_03/male_adult_construction_03.usd.files/measure.usd

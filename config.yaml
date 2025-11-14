@@ -1,0 +1,62 @@
+launch_config:
+  renderer: RaytracedLighting
+  headless: false
+
+resolution: [512, 512]
+rt_subframes: 16
+num_frames: 20
+env_url: "/Isaac/Environments/Simple_Warehouse/full_warehouse.usd"
+writer: "BasicWriter"
+
+writer_config:
+  output_dir: "_out_scene_based_sdg"
+  rgb: true
+  bounding_box_2d_tight: true
+  semantic_segmentation: true
+  distance_to_image_plane: true
+  bounding_box_3d: true
+  occlusion: true
+
+clear_previous_semantics: true
+
+forklift:
+  url: "/Isaac/Props/Forklift/forklift.usd"
+  class: "forklift"
+
+cone:
+  url: "/Isaac/Environments/Simple_Warehouse/Props/S_TrafficCone.usd"
+  class: "traffic_cone"
+
+pallet:
+  url: "/Isaac/Environments/Simple_Warehouse/Props/SM_PaletteA_01.usd"
+  class: "pallet"
+
+cardbox:
+  url: "/Isaac/Environments/Simple_Warehouse/Props/SM_CardBoxD_04.usd"
+  class: "cardbox"
+
+robots:
+  jackal:
+    url: "/Isaac/Robots/Clearpath/Jackal/jackal.usd"
+    class: "jackal"
+  drone:
+    url: "/Isaac/Robots/Iris/iris.usd"
+    class: "iris_drone"
+
+humans:
+  - name: "Human0"
+    usd_path: "/home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/People/Characters/original_male_adult_construction_03/male_adult_construction_03.usd"
+    offset: [1.5, 0.0, 0.0]
+    class: "person"
+
+  - name: "Human1"
+    usd_path: "/home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/People/Characters/female_adult_police_02/female_adult_police_02.usd"
+    offset: [-1.5, 1.0, 0.0]
+    class: "person"
+
+  - name: "Human2"
+    usd_path: "/home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/People/Characters/original_female_adult_police_02/female_adult_police_02.usd"
+    offset: [-0.5, -1.5, 0.0]
+    class: "person"
+
+close_app_after_run: true

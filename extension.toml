@@ -1,0 +1,131 @@
+[package]
+version = "0.7.19"
+authors = ["NVIDIA"]
+title = "Actor SDG"
+description="Actor Simulation and Synthetic Data Generation"
+readme  = "docs/README.md"
+repository = ""
+category = "Synthetic Data"
+keywords = ["metrosim", "agent","actor","metropolis","sdg", "simulation", "synthetic data", "actor sim"]
+changelog="docs/CHANGELOG.md"
+preview_image = "data/preview.png"
+icon = "data/icon.png"
+writeTarget.kit = true
+
+
+[dependencies]
+"omni.usd" = {}
+
+"omni.anim.retarget.core" = {}
+"omni.kit.scripting" = {}
+"omni.kit.mesh.raycast" = {}
+"omni.services.pip_archive" = {}
+"isaacsim.sensors.camera" = {}
+"isaacsim.sensors.physics" = {}
+"isaacsim.sensors.rtx" = {}
+"isaacsim.storage.native" = {}
+"isaacsim.core.utils" = {}
+"isaacsim.replicator.incident" = { version = "^0.1.24" }
+"omni.replicator.core" = {}
+"omni.metropolis.utils" = { version = "^0.1.17"}
+# Navigation related extensions
+"omni.anim.navigation.schema" = { version = "107.3.0", exact = true }
+"omni.anim.navigation.core" = { version = "107.3.0", exact = true }
+"omni.anim.navigation.meshtools" = { version = "107.3.0", exact = true }
+"omni.anim.people" = { version = "^0.7.7" }
+"isaacsim.anim.robot" = { version = "^0.0.13" }
+
+
+[[python.module]]
+name = "isaacsim.replicator.agent.core"
+
+[settings]
+rtx.rtxsensor.coordinateFrameQuaternion = "0.5,-0.5,-0.5,-0.5"
+exts."isaacsim.replicator.agent".behavior_script_settings.behavior_script_path = ""
+exts."isaacsim.replicator.agent".behavior_script_settings.nova_carter_behavior_script_path = ""
+exts."isaacsim.replicator.agent".behavior_script_settings.iw_hub_behavior_script_path = ""
+exts."isaacsim.replicator.agent".characters_parent_prim_path = "/World/Characters"
+exts."isaacsim.replicator.agent".robots_parent_prim_path = "/World/Robots"
+exts."isaacsim.replicator.agent".cameras_parent_prim_path = "/World/Cameras"
+exts."isaacsim.replicator.agent".lidar_cameras_parent_prim_path = "/World/Lidars"
+exts."isaacsim.replicator.agent".extend_data_generation_length = 0      # extend data generation time (in second)
+persistent.exts."isaacsim.replicator.agent".hide_visualization = true
+
+exts."isaacsim.replicator.agent".skip_biped_setup = false       # Turn this on if you have your own Biped in the scene
+
+exts."isaacsim.replicator.agent".debug_print = false
+
+# Asset settings
+exts."isaacsim.replicator.agent".asset_settings.exclusive_character_assets_folders = ["biped_demo"]
+exts."isaacsim.replicator.agent".asset_settings.use_isaac_sim_asset_root = true
+exts."isaacsim.replicator.agent".asset_settings.default_biped_assets_path = ""
+exts."isaacsim.replicator.agent".asset_settings.default_scene_path = ""
+exts."isaacsim.replicator.agent".asset_settings.default_character_asset_path = ""
+exts."isaacsim.replicator.agent".asset_settings.fallback_biped_assets_path = "http://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/People/Characters/Biped_Setup.usd"
+exts."isaacsim.replicator.agent".asset_settings.fallback_scene_path = "http://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/full_warehouse.usd"
+exts."isaacsim.replicator.agent".asset_settings.fallback_character_asset_path = "http://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/People/Characters/"
+persistent.exts."isaacsim.replicator.agent".skip_starting_frames = 5
+persistent.exts."isaacsim.replicator.agent".frame_write_interval = 1
+
+# Randomization
+# - Camera Randomization
+persistent.exts."isaacsim.replicator.agent".max_camera_height = 3
+persistent.exts."isaacsim.replicator.agent".min_camera_height = 2
+persistent.exts."isaacsim.replicator.agent".character_focus_height = 0.7
+persistent.exts."isaacsim.replicator.agent".max_camera_look_down_angle = 60
+persistent.exts."isaacsim.replicator.agent".min_camera_look_down_angle = 0
+persistent.exts."isaacsim.replicator.agent".max_camera_distance = 14
+persistent.exts."isaacsim.replicator.agent".min_camera_distance = 6.5
+persistent.exts."isaacsim.replicator.agent".min_camera_focallength = 13
+persistent.exts."isaacsim.replicator.agent".max_camera_focallength = 23
+persistent.exts."isaacsim.replicator.agent".randomize_camera_info = true
+persistent.exts."isaacsim.replicator.agent".aim_camera_to_character = true
+persistent.exts."isaacsim.replicator.agent".run_replicator_async = false
+
+# - Command Randomiztion
+persistent.exts."isaacsim.replicator.agent".character_transition_map_file_path = ""
+# A reasonable go to distance is about 5 to 20 meters. It controls both GoTo and GoToBlend
+persistent.exts."isaacsim.replicator.agent".character_goto_min_distance = 5
+persistent.exts."isaacsim.replicator.agent".character_goto_max_distance = 20
+persistent.exts."isaacsim.replicator.agent".character_interact_object_root_path = ""
+
+persistent.exts."isaacsim.replicator.agent".robot_goto_min_distance = 5
+persistent.exts."isaacsim.replicator.agent".robot_goto_max_distance = 20
+
+# Data generation
+exts."isaacsim.replicator.agent".default_replicator_output_path = ""
+
+[[test]]
+dependencies = []
+args = [
+    "--no-window",
+    "--/windowless=1",
+    "--/app/settings/fabricDefaultStageFrameHistoryCount=3",
+    "--/app/file/ignoreUnsavedStage=1",
+    "--/exts/isaacsim.replicator.agent/asset_settings/use_isaac_sim_asset_root=0",
+    "--/persistent/isaac/asset_root/timeout=0.1",
+    "--/persistent/isaac/asset_root/default='invalid'",
+    "--/exts/omni.anim.navigation.core/navMesh/config/autoRebakeOnChanges=0",
+    "--/exts/omni.anim.navigation.core/navMesh/config/vizGeomEnable=0",
+    "--/exts/omni.anim.navigation.core/navMesh/config/vizSurfaceEnable=0",
+    "--/exts/omni.anim.navigation.core/navMesh/config/vizOutlineEnable=0",
+    "--/exts/omni.anim.navigation.core/navMesh/config/viewNavMesh=0",
+    "--/persistent.exts/omni.anim.navigation.core/navMesh/config/autoRebakeOnChanges=0",
+    "--/persistent.exts/omni.anim.navigation.core/navMesh/config/vizGeomEnable=0",
+    "--/persistent.exts/omni.anim.navigation.core/navMesh/config/vizSurfaceEnable=0",
+    "--/persistent.exts/omni.anim.navigation.core/navMesh/config/vizOutlineEnable=0",
+    "--/persistent.exts/omni.anim.navigation.core/navMesh/config/viewNavMesh=0",
+]
+stdoutFailPatterns.exclude = [
+    "*FutureWarning: `torch.distributed.reduce_op` is deprecated, please use `torch.distributed.ReduceOp` instead*",
+    "*GLInteropContext::init: carb::windowing is not available*"
+]
+
+[[test]]
+name = "startup"
+args = [
+    "--/app/settings/fabricDefaultStageFrameHistoryCount=3",
+]
+stdoutFailPatterns.exclude = [
+    "*GLInteropContext::init: carb::windowing is not available*"
+]

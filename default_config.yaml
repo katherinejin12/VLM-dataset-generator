@@ -1,0 +1,55 @@
+isaacsim.replicator.agent:
+  version: 0.7.0
+  character:
+    asset_path: https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.0/Isaac/People/Characters/
+    command_file: default_command.txt
+    filters: []
+    navigation_area: []
+    num: 8
+    spawn_area: []
+  global:
+    seed: 123456
+    simulation_length: 1800
+  replicator:
+    writer: IRABasicWriter
+    parameters:
+      object_info_bounding_box_2d_tight: false
+      object_info_bounding_box_2d_loose: false
+      object_info_bounding_box_3d: false
+      agent_info_skeleton_data: false
+      output_dir: /home/deepak/WarehouseResultrobotnewmult
+      semantic_filter_predicate: class:character|robot;id:*
+      image_output_format: png
+      rgb: true
+      camera_params: true
+      semantic_segmentation: false
+      instance_id_segmentation: false
+      instance_segmentation: false
+      distance_to_camera: false
+      distance_to_image_plane: false
+      colorize_depth: false
+      colorize_semantic_segmentation: true
+      colorize_instance_id_segmentation: true
+      colorize_instance_segmentation: true
+      occlusion: false
+      normals: false
+      motion_vectors: true
+      pointcloud: false
+      pointcloud_include_unlabelled: false
+      use_common_output_dir: false
+  response:
+    response_list: []
+  robot:
+    command_file: default_robot_command.txt
+    iw_hub_num: 2
+    navigation_area: []
+    nova_carter_num: 1
+    spawn_area:
+    - Walkable
+    write_data: true
+  scene:
+    asset_path: https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.0/Isaac/Environments/Simple_Warehouse/full_warehouse.usd
+  sensor:
+    camera_num: 1
+  event:
+    event_list: []

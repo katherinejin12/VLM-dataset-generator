@@ -1,0 +1,2 @@
+https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Samples/DR/Materials/.thumbs/sample_materials.thumb.usd
+https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Samples/DR/Materials/sample_materials.usd

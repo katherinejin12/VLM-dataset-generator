@@ -1,0 +1,37 @@
+isaacsim.replicator.agent:
+    version: 0.7.1
+    global:
+        seed: 123456
+        simulation_length: 300
+    scene:
+        asset_path: /home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/full_warehouse.usd
+    sensor:
+        camera_num: 5
+    character: # Optional
+        asset_path: /home/deepak/Downloads/isaac_sim_assets_4_5/isaac-sim-assets-1@4.5.0-rc.36+release.19112.f59b3005/Assets/Isaac/4.5/Isaac/People/Characters/
+        command_file: default_command.txt
+        filters:
+            - "male"
+            - "medical"
+        num: 10
+        spawn_area:
+            - "Walkable"
+        navigation_area:
+            - "Walkable"
+    robot: # Optional
+        command_file: default_robot_command.txt
+        nova_carter_num: 0
+        iw_hub: 0
+        write_data: false
+    response: # Optional
+        response_list: []
+    incident: # Optional
+        incident_list: []
+    replicator:
+        writer: IRABasicWriter
+        parameters:
+            output_dir: /home/deepak/test
+            rgb: true
+            object_info_bounding_box_2d_tight: true
+            object_info_bounding_box_2d_loose: true
+            object_info_bounding_box_3d: true

@@ -1,0 +1,63 @@
+isaacsim.replicator.agent:
+  version: 0.7.0
+  character:
+    asset_path: https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.0/Isaac/People/Characters/
+    command_file: default_command.txt
+    filters: []
+    navigation_area: []
+    num: 8
+    spawn_area: []
+  global:
+    seed: 112546
+    simulation_length: 1800
+  replicator:
+    writer: IRABasicWriter
+    parameters:
+      object_info_bounding_box_2d_tight: false
+      object_info_bounding_box_2d_loose: false
+      object_info_bounding_box_3d: false
+      agent_info_skeleton_data: false
+      output_dir: /home/deepak/WarehouseResultrobotnewmult1
+      semantic_filter_predicate: "class:robot;id:Nova_Carter"
+      image_output_format: png
+      rgb: true
+      camera_params: true
+      semantic_segmentation: false
+      instance_id_segmentation: false
+      instance_segmentation: false
+      distance_to_camera: false
+      distance_to_image_plane: false
+      colorize_depth: false
+      colorize_semantic_segmentation: false
+      colorize_instance_id_segmentation: false
+      colorize_instance_segmentation: false
+      occlusion: false
+      normals: false
+      motion_vectors: false
+      pointcloud: false
+      pointcloud_include_unlabelled: false
+      use_common_output_dir: false
+  response:
+    response_list: []
+  robot:
+    command_file: default_robot_command.txt
+    iw_hub_num: 1
+    navigation_area: []
+    nova_carter_num: 1
+    spawn_area:
+    - Walkable
+    write_data: false
+  character:
+    command_file: default_command.txt
+    num: 8
+    spawn_area:
+        - "Walkable"
+    navigation_area:
+        - "Walkable"
+  scene:
+    asset_path: https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.0/Isaac/Environments/Simple_Warehouse/full_warehouse.usd
+  sensor:
+    camera_list: 
+        - /World/Robots/Nova_Carter/chassis_link/sensors/front_hawk/left/camera_left
+  event:
+    event_list: []
